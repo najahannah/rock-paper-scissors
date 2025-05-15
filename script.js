@@ -5,20 +5,41 @@ function getComputerChoice() {
      let x = Math.floor(Math.random() * 3);
     
      if (x < 1) {
-     return "computer chose rock";
+     return "rock";
      } else if (x > 1) {
-     return "computer chose scissors"
+     return "scissors";
      } else {
-     return "computer chose paper"
+     return "paper";
      }
 }
-console.log(getComputerChoice())
+// console.log(getComputerChoice())
 
 function getHumanChoice() {
-    let choice = prompt("rock, paper, scissors...shoot!");
-    return("you chose " + choice)
+    let choice = prompt("Rock, paper, scissors...shoot!");
+    return choice.toLowerCase();
     }
-console.log(getHumanChoice())
+// console.log(getHumanChoice())
+    
+function playRound() {
+
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+    
+    if (humanChoice == computerChoice) {
+        console.log(`You chose ${humanChoice}. Computer chose ${computerChoice}. This round is a tie!`);
+    } else if (humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "paper" && computerChoice == "rock" || humanChoice == "scissors" && computerChoice == "paper"){
+        humanScore++;
+        console.log(`You chose ${humanChoice}. Computer chose ${computerChoice}. You win this round! Human: ${humanScore}, Computer: ${computerScore}`);
+        } else {
+        computerScore++;
+        console.log(`You chose ${humanChoice}. Computer chose ${computerChoice}. Computer wins this round! Human: ${humanScore}, Computer: ${computerScore}`);
+    }
+    }
+playRound()
+
+    
+
+
 
 
 
