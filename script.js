@@ -29,7 +29,7 @@ function playGame() {
         
         if (humanChoice == computerChoice) {
             console.log(`You chose ${humanChoice}. Computer chose ${computerChoice}. This round is a tie!`);
-        } else if (humanChoice == 'rock' && computerChoice == 'scissors' || humanChoice == 'paper' && computerChoice == 'rock' || humanChoice == 'scissors' && computerChoice == paper){
+        } else if (humanChoice == 'rock' && computerChoice == 'scissors' || humanChoice == 'paper' && computerChoice == 'rock' || humanChoice == 'scissors' && computerChoice == 'paper'){
             humanScore++;
             console.log(`You chose ${humanChoice}. Computer chose ${computerChoice}. You win this round! Human: ${humanScore}, Computer: ${computerScore}`);
         } else {
